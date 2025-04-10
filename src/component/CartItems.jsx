@@ -5,7 +5,6 @@ import data_product from "../assets/Assets/data";
 export const CartItems = () => {
   const { cart, removeFromCart } = useContext(CartContext);
 
-  // 🛒 Calculate total price
   const totalPrice = data_product.reduce((acc, p) => {
     return acc + (cart[p.id] ? p.new_price * cart[p.id] : 0);
   }, 0);
@@ -52,3 +51,4 @@ export const CartItems = () => {
     </div>
   );
 };
+
